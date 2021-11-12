@@ -2,7 +2,7 @@ use std::time::Duration;
 
 use reqwest::header;
 
-pub async fn build_client() -> reqwest::Client {
+pub fn build_client() -> reqwest::Client {
     let mut auth_token = header::HeaderValue::from_static(env!("CURRENT_API_KEY"));
     auth_token.set_sensitive(true);
 
